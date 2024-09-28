@@ -1,0 +1,112 @@
+/* Estilo para la tabla de inscripciones */
+.inscription-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+}
+
+.inscription-table thead tr {
+    background-color: #333;
+    /* Fondo negro */
+    color: #fff;
+    /* Texto blanco */
+    text-align: left;
+}
+
+.inscription-table th,
+.inscription-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    /* Bordes */
+}
+
+.inscription-table tbody tr:nth-child(even) {
+    background-color: #f3f3f3;
+    /* Fondo para filas pares */
+}
+
+.inscription-table tbody tr:hover {
+    background-color: #f5f5f5;
+    /* Fondo al pasar el mouse */
+}
+
+/* Botón de eliminar */
+.delete-btn {
+    background-color: #d9534f;
+    /* Color de fondo rojo */
+    color: white;
+    /* Texto blanco */
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+    background-color: #c9302c;
+    /* Color más oscuro al pasar el mouse */
+}
+
+
+/* Estilo general del contenedor del formulario */
+.event-form-container {
+    max-width: 400px;
+    /* Ancho máximo del formulario */
+    margin: 0 auto;
+    /* Centra el formulario horizontalmente */
+    padding: 20px;
+    background-color: #f9f9f9;
+    /* Fondo claro */
+    border-radius: 8px;
+    /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Sombra sutil */
+}
+
+/* Estilo para el grupo de formularios */
+.event-form-group {
+    margin-bottom: 15px;
+}
+
+/* Estilo para las etiquetas */
+.event-form-group label {
+    font-size: 16px;
+    color: #333;
+    /* Texto oscuro */
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Estilo para los campos de entrada */
+.event-form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    /* Bordes grises */
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Estilo para el botón */
+.event-btn {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 18px;
+    color: white;
+    background-color: #007bff;
+    /* Azul Bootstrap */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.event-btn:hover {
+    background-color: #0056b3;
+    /* Azul más oscuro al pasar el mouse */
+}

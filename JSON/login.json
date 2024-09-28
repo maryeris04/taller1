@@ -1,0 +1,18 @@
+[
+    {
+      "email": "admin@universidad.edu.co",
+      "password": "admin123",
+      "role": "administrador"
+    },
+    {
+      "email": "estudiante1@universidad.edu.co",
+      "password": "estudiante123",
+      "role": "estudiante"
+    },
+    {
+      "email": "entrenador1@universidad.edu.co",
+      "password": "entrenador123",
+      "role": "entrenador"
+    }
+  ]
+  

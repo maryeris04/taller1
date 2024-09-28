@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrenador</title>
+    <link rel="stylesheet" href="../CSS/admin.css">
+    <link rel="stylesheet" href="../CSS/entrenadores.css"> 
+    <style>
+        .welcome-message {
+            position: absolute;
+            left: 20px;
+            top: 20px; 
+            color: #fff; 
+            font-size: 16px;
+            font-weight: bold; 
+        }
+        
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="welcome-message" id="welcomeMessage">Bienvenido, Entrenador</div>
+        <h1>Centro Deportivo de Barranquilla</h1>
+        <h2>Entrenador</h2>
+    </header>
+
+    <div class="menu">
+        <button onclick="showOption(1)">Ver Inscripciones</button>
+        <button onclick="showOption(2)">Agregar Evento</button>
+        <button onclick="showOption(3)">Ver Eventos</button>
+    </div>
+
+    <div class="content">
+        <div class="items" id="option1">
+            <h3>Inscripciones Disponibles</h3>
+            <table id="inscription-table" class="inscription-table">
+                <thead>
+                    <tr>
+                        <th>Nombre del Alumno</th>
+                        <th>Correo Electrónico</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="inscription-list">
+                    
+                </tbody>
+            </table>
+        </div>
+
+        <div class="items" id="option2" style="display:none;">
+            <h3>Formulario para Agregar Evento</h3>
+            <div class="event-form-container">
+                <div id="event-form">
+                    <div class="event-form-group">
+                        <label for="event-name">Nombre del Evento:</label>
+                        <input type="text" id="event-name" class="event-form-control"
+                            placeholder="Ingrese el nombre del evento" required>
+                    </div>
+                    <div class="event-form-group">
+                        <label for="event-date">Fecha del Evento:</label>
+                        <input type="date" id="event-date" class="event-form-control" required>
+                    </div>
+                    <button onclick="addEvent()" class="event-btn">Agregar Evento</button>
+                </div>
+            </div>
+        </div>
+
+    
+        <div class="items" id="option3" style="display:none;">
+            <h3>Eventos Programados</h3>
+            <table id="event-table" class="inscription-table">
+                <thead>
+                    <tr>
+                        <th>Nombre del Evento</th>
+                        <th>Fecha del Evento</th>
+                    </tr>
+                </thead>
+                <tbody id="event-list">
+   
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <footer class="pie">
+        <b>Maryeris Labiosa</b> <br>
+        <b>Anderson Lopez</b>
+    </footer>
+
+    <script src="../JS/entrenadores.js"></script>
+</body>
+
+</html>

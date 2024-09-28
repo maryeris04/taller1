@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador</title>
+    <link rel="stylesheet" href="../CSS/admin.css">
+   
+</head>
+<style>
+        .welcome-message {
+            position: absolute; 
+            left: 20px; 
+            top: 20px; 
+            color: #fff; 
+            font-size: 16px; 
+            font-weight: bold;
+        }
+        
+    </style>
+<body>
+    <header>
+        <div class="welcome-message" id="welcomeMessage">Bienvenido, Administrador</div>
+        <h1>Institución Universitaria de Barranquilla</h1>
+        <h2>Administrador</h2>
+    </header>
+
+    <div class="menu">
+        <button onclick="showOption(1)">Eventos</button>
+        <button onclick="showOption(2)">¿como administrar?</button>
+        <button onclick="showOption(3)">Soporte</button>
+    </div>
+
+    <div class="content">
+        <div class="items" id="option1">
+            <div id="calendar"></div>
+
+            <div id="event-form">
+                <h4>Agregar Evento</h4>
+                <div class="form-group">
+                    <label for="event-date">Fecha:</label>
+                    <input type="date" id="event-date" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="event-name">Nombre del evento:</label>
+                    <input type="text" id="event-name" class="form-control" placeholder="Ingrese el nombre del evento" required>
+                </div>
+                <button onclick="addEvent()" class="btn">Agregar Evento</button>
+            </div>
+
+            <table id="event-table" class="event-table">
+                <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Nombre del Evento</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="event-list"></tbody>
+            </table>
+        </div>
+
+        <div class="items" id="option2">
+            <h3>¿Cómo administrar?</h3>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/4murk6r-ATo?si=e1ULhCjbVhyatB8I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="admin-info">
+                <h3>Información Básica para Administrar la Página</h3>
+                <p>Esta sección te ofrece información esencial para gestionar eficazmente la página web.</p>
+                <ul>
+                    <li><strong>Accesibilidad:</strong> Asegúrate de que todos los usuarios puedan acceder al contenido de la página. Usa textos alternativos para imágenes y asegúrate de que la navegación sea clara.</li>
+                    <li><strong>Actualización de Contenidos:</strong> Mantén la información de eventos y noticias actualizada para que los visitantes siempre encuentren datos relevantes.</li>
+                    <li><strong>Uso de Formularios:</strong> Utiliza formularios claros y sencillos para recopilar información de los usuarios, asegurando que la validación de datos esté implementada.</li>
+                    <li><strong>Seguridad:</strong> Asegúrate de que la página esté protegida contra ataques. Utiliza HTTPS y verifica los datos de los formularios para evitar inyecciones SQL.</li>
+                    <li><strong>SEO:</strong> Optimiza tu página para motores de búsqueda usando etiquetas meta adecuadas y contenido relevante. Esto ayudará a mejorar la visibilidad de tu sitio.</li>
+                    <li><strong>Responsive Design:</strong> Asegúrate de que la página se vea bien en dispositivos móviles y en diferentes tamaños de pantalla.</li>
+                </ul>
+            </div>
+        </div>
+        
+
+
+        
+        <div class="content"> 
+        <div class="items" id="option3">
+            <div class="event-suporte"> 
+                <h4>SOPORTE</h4>
+            </div>
+            <form id="support-form">
+                <div class="form-group">
+                    <label for="support-name">Nombre:</label>
+                    <input type="text" id="support-name" class="form-control" placeholder="Ingrese su nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="support-email">Correo Electrónico:</label>
+                    <input type="email" id="support-email" class="form-control" placeholder="Ingrese su correo electrónico" required>
+                </div>
+                <div class="form-group">
+                    <label for="support-message">Mensaje:</label>
+                    <textarea id="support-message" class="form-control" placeholder="Describa su problema o pregunta" required></textarea>
+                </div>
+                <button type="submit" onclick="submitSupport()" class="btnsuport">Enviar</button>
+            </form>
+        </div>
+        
+
+        
+
+    <footer class="pie"> 
+        <b>Maryeris Labiosa</b> <br>
+        <b>Anderson Lopez</b> 
+    </footer>
+
+    <script src="../JS/admin.js"></script>
+</body>
+</html>

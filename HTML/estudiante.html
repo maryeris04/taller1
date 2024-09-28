@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudiante</title>
+    <link rel="stylesheet" href="../CSS/admin.css">
+    <link rel="stylesheet" href="../CSS/estudiantes.css"> 
+    <style>
+        .welcome-message {
+            position: absolute; 
+            left: 20px; 
+            top: 20px; 
+            color: #fff; 
+            font-size: 16px;
+            font-weight: bold; 
+        }
+        
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="welcome-message" id="welcomeMessage">Bienvenido, Estudiante</div>
+        <h1>Institución Universitaria de Barranquilla</h1>
+        <h2>Estudiante</h2>
+    </header>
+
+    <div class="menu">
+        <button onclick="showOption(1)">Ver Eventos</button>
+        <button onclick="showOption(2)">Inscripción</button>
+    </div>
+
+    <div class="content">
+        <div class="items" id="option1">
+            <h3>Eventos Disponibles</h3>
+            <table id="event-table" class="event-table">
+                <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Nombre del Evento</th>
+                    </tr>
+                </thead>
+                <tbody id="event-list">
+                    
+                </tbody>
+            </table>
+        </div>
+
+        <div class="items" id="option2" style="display:none;">
+            <h3>Formulario de Inscripción</h3>
+            <div class="registration-form-container">
+                <div id="registration-form">
+                    <div class="registration-form-group">
+                        <label for="student-name">Nombre:</label>
+                        <input type="text" id="student-name" class="registration-form-control"
+                            placeholder="Ingrese su nombre" required>
+                    </div>
+                    <div class="registration-form-group">
+                        <label for="student-email">Correo Electrónico:</label>
+                        <input type="email" id="student-email" class="registration-form-control"
+                            placeholder="Ingrese su correo" required>
+                    </div>
+                    <button onclick="registerStudent()" class="registration-btn">Inscribirse</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="pie">
+        <b>Maryeris Labiosa</b> <br>
+        <b>Anderson Lopez</b>
+    </footer>
+
+    <script src="../JS/estudiantes.js"></script>
+    
+
+</html>
